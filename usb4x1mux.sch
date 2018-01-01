@@ -3977,7 +3977,9 @@ SW4 = P0_10
 1A = P0_3
 1B = P0_2
 </text>
-<text x="162.56" y="25.4" size="1.778" layer="91">compatible with Hammond 1593K ABS enclosure</text>
+<text x="162.56" y="25.4" size="1.778" layer="91">compatible with 
+Hammond 1593K ABS enclosure
+TAKACHI GHA7-3-7PG/PB ABS enclosure</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
