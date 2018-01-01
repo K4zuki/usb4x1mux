@@ -2215,6 +2215,37 @@ grid 7.62 mm, diameter 18 mm</description>
 <text x="-5.8928" y="-4.445" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="7.874" y="-4.445" size="1.778" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
 </package>
+<package name="CON-FFKV3">
+<description>&lt;b&gt;PHOENIX&lt;/b&gt;</description>
+<wire x1="-5.08" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="5.08" x2="0" y2="5.08" width="0.254" layer="21"/>
+<wire x1="0" y1="5.08" x2="2.54" y2="5.08" width="0.254" layer="21"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="2.54" y1="-6.35" x2="0" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="0" y1="-6.35" x2="-2.54" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="-6.35" x2="-5.08" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="-6.35" x2="-5.08" y2="5.08" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="0" y1="5.08" x2="0" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="-3.81" x2="5.08" y2="-3.81" width="0.254" layer="51"/>
+<wire x1="2.54" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="21"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="5.08" y1="-6.35" x2="2.54" y2="-6.35" width="0.254" layer="21"/>
+<circle x="-1.27" y="-2.54" radius="1.27" width="0.254" layer="51"/>
+<circle x="1.27" y="-2.54" radius="1.27" width="0.254" layer="51"/>
+<circle x="3.81" y="-2.54" radius="1.27" width="0.254" layer="51"/>
+<pad name="2" x="-1.27" y="-2.54" drill="0.9906" shape="long" rot="R90"/>
+<pad name="1" x="-1.27" y="2.54" drill="0.9906" shape="long" rot="R90"/>
+<pad name="4" x="1.27" y="-2.54" drill="0.9906" shape="long" rot="R90"/>
+<pad name="3" x="1.27" y="2.54" drill="0.9906" shape="long" rot="R90"/>
+<pad name="6" x="3.81" y="-2.54" drill="0.9906" shape="long" rot="R90"/>
+<pad name="5" x="3.81" y="2.54" drill="0.9906" shape="long" rot="R90"/>
+<text x="-1.905" y="-6.015" size="1.778" layer="21" font="vector" ratio="14">1</text>
+<text x="0.635" y="-6.015" size="1.778" layer="21" font="vector" ratio="14">2</text>
+<text x="-4.826" y="5.334" size="1.27" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<text x="-4.699" y="3.175" size="1.27" layer="27" font="vector" ratio="20" rot="R270">&gt;VALUE</text>
+<text x="3.175" y="-6.015" size="1.778" layer="21" font="vector" ratio="14">3</text>
+</package>
 </packages>
 <symbols>
 <symbol name="UNIVERSALBOARD-AKI">
@@ -3830,6 +3861,25 @@ grid 7.62 mm, diameter 18 mm</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="CON-TANSHI3" prefix="CON" uservalue="yes">
+<gates>
+<gate name="-1" symbol="TESTPIN-1" x="2.54" y="0"/>
+<gate name="-2" symbol="TESTPIN-1" x="2.54" y="-2.54"/>
+<gate name="-3" symbol="TESTPIN-1" x="2.54" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="CON-FFKV3">
+<connects>
+<connect gate="-1" pin="1" pad="1 2"/>
+<connect gate="-2" pin="1" pad="3 4"/>
+<connect gate="-3" pin="1" pad="5 6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -3905,6 +3955,8 @@ grid 7.62 mm, diameter 18 mm</description>
 <part name="IC10" library="mylib" deviceset="IC-TTL-SINGLE-74-139" device="-FLAT" value="SN74LVC1G139DCTR"/>
 <part name="SUPPLY33" library="mylib" deviceset="GND" device=""/>
 <part name="C7" library="mylib" deviceset="C-SMD-*" device="-1608" technology="0.1U" value="0.1u/1005"/>
+<part name="CON9" library="mylib" deviceset="CON-TANSHI3" device=""/>
+<part name="SUPPLY19" library="mylib" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3995,6 +4047,10 @@ SW4 = P0_10
 </instance>
 <instance part="SUPPLY33" gate="GND" x="203.2" y="58.42" rot="R90"/>
 <instance part="C7" gate="G$1" x="198.12" y="60.96"/>
+<instance part="CON9" gate="-1" x="20.32" y="83.82" rot="R180"/>
+<instance part="CON9" gate="-2" x="20.32" y="81.28" rot="R180"/>
+<instance part="CON9" gate="-3" x="20.32" y="78.74" rot="R180"/>
+<instance part="SUPPLY19" gate="GND" x="25.4" y="78.74" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -4177,6 +4233,10 @@ SW4 = P0_10
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="198.12" y1="58.42" x2="195.58" y2="58.42" width="0.1524" layer="91"/>
 <junction x="198.12" y="58.42"/>
+</segment>
+<segment>
+<pinref part="CON9" gate="-3" pin="1"/>
+<pinref part="SUPPLY19" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -4562,6 +4622,11 @@ SW4 = P0_10
 <pinref part="U1" gate="G$1" pin="P0_0/ACMP_I1"/>
 <label x="76.2" y="116.84" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="22.86" y1="83.82" x2="30.48" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="CON9" gate="-1" pin="1"/>
+<label x="30.48" y="83.82" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ISP" class="0">
 <segment>
@@ -4600,6 +4665,11 @@ SW4 = P0_10
 <wire x1="17.78" y1="109.22" x2="10.16" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="P0_4/!TRST!"/>
 <label x="7.62" y="109.22" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="30.48" y1="81.28" x2="22.86" y2="81.28" width="0.1524" layer="91"/>
+<label x="30.48" y="81.28" size="1.778" layer="95"/>
+<pinref part="CON9" gate="-2" pin="1"/>
 </segment>
 </net>
 <net name="LSEL1" class="0">
