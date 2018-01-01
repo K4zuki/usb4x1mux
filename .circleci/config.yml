@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: k4zuki/pandocker
+    steps:
+      - checkout
+      - run:
+          name: get submodule
+          command: |
+            git submodule update --init
+      - run:
+          name: Prepare tag update
+          command: |
+            git clone https://github.com/K4zuki/myPCBlib.git tag-updater
+      - run:
+          name: Update tags in sch/brd files
+          command: |
+            export SHORT_HASH=`echo $CIRCLE_SHA1|cut -c1-7`
+            for fname in `ls *.sch *.brd`; do python3 tag-updater/eagle-commit-update.py $fname --tag $SHORT_HASH ; done
+
+      - run:
+          name: Deploy preparation
+          command: |
+            export SHORT_HASH=`echo $CIRCLE_SHA1|cut -c1-7`
+            apt install zip
+            mkdir -p deploy; cd deploy
+            zip $CIRCLE_PROJECT_REPONAME-$SHORT_HASH ../*-$SHORT_HASH.brd ../*-$SHORT_HASH.sch
+            cd ..
+
+      - run:
+          name: Deploy
+          command: |
+            export SHORT_HASH=`echo $CIRCLE_SHA1|cut -c1-7`
+            ghr -replace -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME build-$SHORT_HASH deploy/
