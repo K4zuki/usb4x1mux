@@ -1286,9 +1286,9 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="GIT1" library="git-revision" package="GIT-REVISION_1.7" value="" x="35.6" y="14.8" smashed="yes">
-<attribute name="NOT_COMPONENT" value="YES" x="35.6" y="14.8" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="35.6" y="14.8" size="1.7" layer="21" ratio="12" align="center"/>
+<element name="GIT1" library="git-revision" package="GIT-REVISION_1.7" value="" x="68.9" y="65.8" smashed="yes">
+<attribute name="NOT_COMPONENT" value="YES" x="68.9" y="65.8" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="68.9" y="65.8" size="1.7" layer="21" ratio="12" align="center"/>
 </element>
 <element name="PCB1" library="mylib" package="HAMMOND-1593K" value="" x="32.7" y="11.7" smashed="yes"/>
 <element name="PCB2" library="mylib" package="HAMMOND-1593-28" value="" x="95.3" y="70" smashed="yes" rot="SR270"/>
