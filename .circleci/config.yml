@@ -26,6 +26,7 @@ jobs:
             apt install zip
             mkdir -p deploy; cd deploy
             zip $CIRCLE_PROJECT_REPONAME-$SHORT_HASH ../*-$SHORT_HASH.brd ../*-$SHORT_HASH.sch
+            zip $CIRCLE_PROJECT_REPONAME-$SHORT_HASH-gerb274x ../$CIRCLE_PROJECT_REPONAME/
             cd ..
 
       - run:
