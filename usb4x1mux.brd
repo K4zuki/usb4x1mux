@@ -1333,10 +1333,18 @@ design rules under a new name.</description>
 <attribute name="SMD-PAD" value="17" x="72.7" y="40" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="75.3" y="42.3" size="1.27" layer="25" ratio="20" align="center"/>
 </element>
-<element name="SW1" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="19" rot="R180"/>
-<element name="SW2" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="33" rot="R180"/>
-<element name="SW3" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="47"/>
-<element name="SW4" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="61"/>
+<element name="SW1" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="19" rot="R180">
+<attribute name="AKIZUKI" value="P-12722" x="112.3" y="19" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="SW2" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="33" rot="R180">
+<attribute name="AKIZUKI" value="P-12722" x="112.3" y="33" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="SW3" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="47">
+<attribute name="AKIZUKI" value="P-12722" x="112.3" y="47" size="1.778" layer="27" display="off"/>
+</element>
+<element name="SW4" library="mylib" package="TS-ALGWRH-G" value="" x="112.3" y="61">
+<attribute name="AKIZUKI" value="P-12722" x="112.3" y="61" size="1.778" layer="27" display="off"/>
+</element>
 <element name="CON6" library="mylib" package="ETB43024" value="" x="38.7" y="60" smashed="yes" rot="R270">
 <attribute name="AKIZUKI" value="P-11589" x="38.7" y="60" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="40.6" y="53.6" size="2" layer="25" ratio="15" align="center"/>

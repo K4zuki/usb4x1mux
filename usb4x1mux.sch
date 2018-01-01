@@ -2830,7 +2830,9 @@ grid 7.62 mm, diameter 18 mm</description>
 <connect gate="SW" pin="S" pad="1 2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="WH">
+<attribute name="AKIZUKI" value="P-12722" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -3905,10 +3907,10 @@ grid 7.62 mm, diameter 18 mm</description>
 <part name="CON4" library="mylib" deviceset="CON-USB" device="-UB"/>
 <part name="CON5" library="mylib" deviceset="CON-USB" device="-UB"/>
 <part name="IC1" library="mylib" deviceset="IC-USB-FSUSB74" device=""/>
-<part name="SW1" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ"/>
-<part name="SW2" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ"/>
-<part name="SW3" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ"/>
-<part name="SW4" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ"/>
+<part name="SW1" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ" technology="WH"/>
+<part name="SW2" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ" technology="WH"/>
+<part name="SW3" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ" technology="WH"/>
+<part name="SW4" library="mylib" deviceset="TACTSW2-LED-*" device="-10SQ" technology="WH"/>
 <part name="CON6" library="mylib" deviceset="ETB43024*" device="" technology="B"/>
 <part name="IC2" library="mylib" deviceset="LDO4-*" device="-SOT223" technology="5.0"/>
 <part name="SUPPLY1" library="mylib" deviceset="GND" device=""/>
